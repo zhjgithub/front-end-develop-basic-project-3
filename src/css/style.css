@@ -1,5 +1,22 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2,
+h3,
+a,
+figcaption {
+    font-weight: 400;
+}
+
 img {
     max-width: 100%;
+}
+
+header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 100px;
 }
 
 hr {
@@ -14,19 +31,13 @@ figcaption {
 }
 
 h1,
-h3 {
+h3,
+figcaption {
     text-transform: uppercase;
 }
 
-
-
 h2 {
     color: #7d97ad;
-}
-
-h1 {
-    font-weight: 300;
-    font-size: 3em;
 }
 
 article {
@@ -34,23 +45,27 @@ article {
 }
 
 figcaption {
-    font-size: 3em;
-    text-transform: uppercase;
+    font-size: 2.5em;
 }
 
-.container {
-    margin-top: 8px;
-    margin-bottom: 16px;
-}
-
-.logo {
+.text-logo {
     float: left;
     color: #02b3e4;
+    font-size: 5em;
+}
+
+.name {
+    font-weight: 200;
+    font-size: 4em;
+}
+
+.position {
+    margin-top: 15px;
 }
 
 .hero {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 .info {
@@ -59,4 +74,8 @@ figcaption {
 
 .project-picture {
     width: 100%;
+}
+
+.project {
+    margin-bottom: 16px;
 }
