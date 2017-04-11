@@ -2,13 +2,6 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-h2,
-h3,
-a,
-figcaption {
-    font-weight: 400;
-}
-
 img {
     max-width: 100%;
 }

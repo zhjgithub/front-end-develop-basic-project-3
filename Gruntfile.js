@@ -1,5 +1,5 @@
 /*global module:false*/
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
   // Project configuration.
   grunt.initConfig({
@@ -65,6 +65,104 @@ module.exports = function(grunt) {
         files: '<%= jshint.lib_test.src %>',
         tasks: ['jshint:lib_test', 'qunit']
       }
+    },
+    responsive_images: {
+      dev: {
+        options: {
+          sizes: [{
+            width: 480,
+            quality: 50
+          }, {
+            width: 640,
+            quality: 50
+          }, {
+            width: 720,
+            quality: 50
+          }, {
+            width: 960,
+            quality: 50
+          }, {
+            width: 1280,
+            quality: 50
+          }, {
+            width: 1440,
+            quality: 50
+          }, {
+            width: 1920,
+            quality: 50
+          }, {
+            width: 2560,
+            quality: 50
+          }]
+        },
+        files: [{
+          expand: true,
+          src: ['mountain.jpg'],
+          cwd: 'src/images/',
+          dest: 'dist/images/'
+        }]
+      },
+      project: {
+        options: {
+          sizes: [{
+            width: 300,
+            quality: 50
+          }, {
+            width: 360,
+            quality: 50
+          }, {
+            width: 480,
+            quality: 50
+          }, {
+            width: 600,
+            quality: 50
+          }, {
+            width: 640,
+            quality: 50
+          }, {
+            width: 720,
+            quality: 50
+          }, {
+            width: 960,
+            quality: 50
+          }, {
+            width: 1280,
+            quality: 50
+          }, {
+            width: 1440,
+            quality: 50
+          }, {
+            width: 1920,
+            quality: 50
+          }]
+        },
+        files: [{
+          expand: true,
+          src: ['forest.jpg', 'mushroom.jpg', 'frog.jpg'],
+          cwd: 'src/images/',
+          dest: 'dist/images/'
+        }]
+      }
+    },
+    clean: {
+      dev: {
+        src: ['dist/images/']
+      }
+    },
+    copy: {
+      dev: {
+        files: [{
+          expand: true,
+          src: ['src/index.html'],
+          dest: 'dist/',
+          flatten: true
+        }, {
+          expand: true,
+          src: ['css/*'],
+          cwd: 'src/',
+          dest: 'dist/'
+        }]
+      }
     }
   });
 
@@ -74,8 +172,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-responsive-images');
 
   // Default task.
   grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
+  grunt.registerTask('image', ['clean', 'copy', 'responsive_images']);
+  grunt.registerTask('copyhtml', ['copy']);
 
 };
