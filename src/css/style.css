@@ -7,9 +7,7 @@ img {
 }
 
 header {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    line-height: 100px;
+    height: 64px;
 }
 
 hr {
@@ -17,20 +15,21 @@ hr {
 }
 
 h1,
-h3,
+h4,
 a,
 figcaption {
     color: #2d3c49;
 }
 
 h1,
-h3,
+h4,
 figcaption {
     text-transform: uppercase;
 }
 
 h2 {
     color: #7d97ad;
+    padding-left: 8px;
 }
 
 article {
@@ -38,30 +37,21 @@ article {
 }
 
 figcaption {
-    font-size: 2.5em;
+    font-size: 1.5em;
 }
 
-.text-logo {
+.logo {
     float: left;
-    color: #02b3e4;
-    font-size: 5em;
+    width: 64px;
+    position: relative;
+    left: -6px;
 }
 
 .name {
     font-weight: 200;
-    font-size: 4em;
 }
 
-.position {
-    margin-top: 15px;
-}
-
-.hero {
-    padding-top: 8px;
-    padding-bottom: 8px;
-}
-
-.info {
+.profile {
     text-align: right;
 }
 
@@ -71,4 +61,38 @@ figcaption {
 
 .project {
     margin-bottom: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+    header {
+        height: 100px;
+    }
+    .logo {
+        width: 100px;
+        left: -10px;
+    }
+    .name {
+        font-size: 4em;
+    }
+    .position {
+        margin-top: 15px;
+        font-size: 1.6em;
+    }
+    figcaption {
+        font-size: 2.5em;
+    }
+    .hero {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    hr {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    h2 {
+        margin-top: 10px;
+    }
 }

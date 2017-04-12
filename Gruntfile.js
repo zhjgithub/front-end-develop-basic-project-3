@@ -86,13 +86,13 @@ module.exports = function (grunt) {
             quality: 50
           }, {
             width: 1440,
-            quality: 50
+            quality: 25
           }, {
             width: 1920,
-            quality: 50
+            quality: 25
           }, {
             width: 2560,
-            quality: 50
+            quality: 25
           }]
         },
         files: [{
@@ -124,16 +124,16 @@ module.exports = function (grunt) {
             quality: 50
           }, {
             width: 960,
-            quality: 50
+            quality: 25
           }, {
             width: 1280,
-            quality: 50
+            quality: 25
           }, {
             width: 1440,
-            quality: 50
+            quality: 25
           }, {
             width: 1920,
-            quality: 50
+            quality: 25
           }]
         },
         files: [{
@@ -161,6 +161,11 @@ module.exports = function (grunt) {
           src: ['css/*'],
           cwd: 'src/',
           dest: 'dist/'
+        }, {
+          expand: true,
+          flatten: true,
+          src: 'src/images/notebook.svg',
+          dest: 'dist/images/'
         }]
       }
     }
