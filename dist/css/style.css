@@ -8,22 +8,24 @@ img {
 
 header {
     height: 64px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 hr {
     border: 2px solid #7d97ad;
 }
 
-h1,
-h4,
 a,
-figcaption {
+figcaption,
+.developer,
+.profession {
     color: #2d3c49;
 }
 
-h1,
-h4,
-figcaption {
+figcaption,
+.developer,
+.profession {
     text-transform: uppercase;
 }
 
@@ -47,20 +49,26 @@ figcaption {
     left: -6px;
 }
 
-.name {
-    font-weight: 200;
-}
-
 .profile {
     text-align: right;
 }
 
-.project-picture {
-    width: 100%;
+.developer {
+    font-weight: 200;
+    font-size: 2em;
+}
+
+.profession {
+    font-size: 1em;
+    margin-top: 6px;
 }
 
 .project {
     margin-bottom: 16px;
+}
+
+.project-picture {
+    width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -71,19 +79,22 @@ figcaption {
         width: 100px;
         left: -10px;
     }
-    .name {
+    .developer {
         font-size: 4em;
     }
     .profession {
-        margin-top: 15px;
+        margin-top: -4px;
         font-size: 1.6em;
-    }
-    figcaption {
-        font-size: 2.5em;
     }
     .hero {
         padding-top: 8px;
         padding-bottom: 8px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    figcaption {
+        font-size: 2.5em;
     }
 }
 
