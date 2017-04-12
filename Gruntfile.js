@@ -182,8 +182,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-responsive-images');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
-  grunt.registerTask('image', ['clean', 'copy', 'responsive_images']);
-  grunt.registerTask('copyhtml', ['copy']);
+  grunt.registerTask('default', ['clean', 'copy', 'responsive_images']);
+  grunt.registerTask('copyfiles', ['copy']);
 
 };
