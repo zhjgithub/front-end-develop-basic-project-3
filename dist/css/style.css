@@ -2,10 +2,6 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-img {
-    max-width: 100%;
-}
-
 header {
     height: 64px;
     margin-top: 10px;
@@ -55,10 +51,6 @@ article {
 
 .project {
     margin-bottom: 16px;
-}
-
-.project-picture {
-    width: 100%;
 }
 
 .project-name {
